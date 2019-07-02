@@ -1,0 +1,71 @@
+
+body{
+	background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(aurora.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	
+}
+
+.login-page{
+	 width:360px;
+	 padding: 10 0 0;
+	 margin: auto:
+}
+/*
+.form{
+	position: center;
+	z-index: 1;
+	background: rgba(40,50,60,.5);
+	max-width: 360px;
+	text-align: center;
+	padding: 45px;
+}
+*/
+
+
+.form input {
+	font-family: "Roboto", sans-serif;
+	outline: 1;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size:14px; 
+}
+.form button {
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #4CAF50;
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	box-sizing: border-box;
+	color: #ffffff;
+	font-size: 14px;
+}
+.signin-form{
+	
+	position: center;
+	z-index: 1;
+	background: rgba(40,50,60,.5);
+	max-width: 500px;
+	min-width: 300px;
+	text-align: center;
+	padding: 45px;
+	margin: 20 900 0;
+
+}
+.signup-form{
+	position: center;
+	z-index: 1;
+	background: rgba(40,50,60,.5);
+	min-width: 300px;
+	max-width: 300px;
+	text-align: center;
+	padding: 45px;
+	margin: 70 900 0;
+}
