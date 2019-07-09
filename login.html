@@ -1,3 +1,5 @@
+
+<DOCTYPE html>
 <html>
 <head>
 <title> Login</title> 
@@ -5,17 +7,18 @@
 <body> 
 	<div class="login-page">
 	<div class="form">
-		<form class="signin-form">
-		<input type="text" placeholder="email"/>
-		<input type="text" placeholder="password"/>
-		<button>SignIn</button>
+		<form class="signin-form" method="POST" action="signin.php">
+		<input type="text" placeholder="email" name="mail"/>
+		<input type="password" name="pass1" placeholder="password" />
+		<button name="signin" onclick="CheckPassword(pass1);EmailValidation(mail.value);">SignIn</button>
 		</form>
 		
-		<form class="signup-form">
-		<input type="text" placeholder="firstname"/> <input type="text" placeholder="lastname"/>
-		<input type="text" placeholder="password"/>
-		<input type="text" placeholder="email"/>
-		<button>SignUp</button>
+		<form class="signup-form" method="POST" action="signup.php">
+		<input type="text" placeholder="firstname" name="firstname"/>
+		<input type="text" placeholder="lastname" name="lastname"/>
+		<input type="password" name="pass2" placeholder="password"/>
+		<input type="text" placeholder="email" name="mail2"/>
+		<button name="signup" onclick="CheckPassword(pass2);Checkfistname(firstname.value);CheckSecondname(lastname.value);EmailValidation(mail.value);">SignUp</button>
 		</form>
 		
 		
@@ -23,5 +26,31 @@
 	</div>
 	 
 </body>
+		<script>
+		function CheckPassword(inputtxt) 
+		{ 
+			var pattern = /(?=.*\d)(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}/ ;
+			
+			if(inputtxt.value.match(pattern))  alert('Correct password pattern followed');
+			else	alert('Invalid password...!\npassword must contain atleast 8 characters with minimum 1 uppercase letter, 1 digit, 1 symbol ');
+		}
+		function Checkfistname(inputtxt) 
+		{ 
+			if(inputtxt.length > 10)  alert('Denied.....!!First Name should not exceed 10 characters');
+			else	alert('Correct...!!First Name less than 10 characters');
+		}
+		function CheckSecondname(inputtxt) 
+		{ 
+			if(inputtxt.length > 10)  alert('Denied.....!!Last Name should not exceed 10 characters');
+			else	alert('Correct...!!Last Name less than 10 characters');
+		}
+		function EmailValidation(str) {
+			var pattern =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;      /*  \W=[A-Za-z0-9_]   */
+			
+			if( pattern.test(str)==true) alert("Valid Email Address"); 
+			else alert("Invalid Email");
+		}
+		
+		</script>
 </head>
 </html>
